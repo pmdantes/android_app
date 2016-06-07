@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity
 {
     // Public constant
     public final static String EXTRA_MESSAGE = "com.example.dantes.myfirstapp.MESSAGE";
+    public final String LOG_TAG = this.getLocalClassName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +35,39 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
+        Log.d(LOG_TAG, "onCreate");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(LOG_TAG, "onStart");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(LOG_TAG, "onResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(LOG_TAG, "onRestart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(LOG_TAG, "onStop");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(LOG_TAG, "onPause");
     }
 
     @Override
@@ -61,7 +97,7 @@ public class MainActivity extends AppCompatActivity
     /* Called when the user clicks the Send button */
     public void sendMessage(View view)
     {
-        // Creates new Intent object used to send action
+        // Creates new Intent object directed to DisplayMessageActivity class
         Intent intent = new Intent(this, DisplayMessageActivity.class);
 
         // Creates new EditText object by getting the EditText element
