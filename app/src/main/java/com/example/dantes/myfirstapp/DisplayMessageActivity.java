@@ -30,6 +30,6 @@ public class DisplayMessageActivity extends AppCompatActivity
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
         layout.addView(textView);
 
-        Log.d(getLocalClassName(), "onCreate");
+//        Log.d(getLocalClassName(), "onCreate");
     }
 }

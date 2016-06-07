@@ -28,47 +28,55 @@ public class MainActivity extends AppCompatActivity
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View view)
+//            {
+//                Snackbar.make(view, "Replace with your own action",
+//                        Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
-        Log.d(LOG_TAG, "onCreate");
+//        Log.d(LOG_TAG, "onCreate");
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(LOG_TAG, "onStart");
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(LOG_TAG, "onResume");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(LOG_TAG, "onRestart");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(LOG_TAG, "onStop");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(LOG_TAG, "onPause");
-    }
+//
+//    @Override
+//    protected void onStart()
+//    {
+//        super.onStart();
+//        Log.d(LOG_TAG, "onStart");
+//
+//    }
+//
+//    @Override
+//    protected void onResume()
+//    {
+//        super.onResume();
+//        Log.d(LOG_TAG, "onResume");
+//    }
+//
+//    @Override
+//    protected void onRestart()
+//    {
+//        super.onRestart();
+//        Log.d(LOG_TAG, "onRestart");
+//    }
+//
+//    @Override
+//    protected void onStop()
+//    {
+//        super.onStop();
+//        Log.d(LOG_TAG, "onStop");
+//    }
+//
+//    @Override
+//    protected void onPause()
+//    {
+//        super.onPause();
+//        Log.d(LOG_TAG, "onPause");
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -87,7 +95,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_settings)
+        {
             return true;
         }
 
